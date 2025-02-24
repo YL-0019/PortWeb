@@ -1,0 +1,609 @@
+body {
+    background-color: rgba(32,32,32,255)
+}
+
+
+#Grand-div-one {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 100px;
+
+}
+
+
+#div-one {
+    display: flex;
+}
+
+
+#div-one button {
+    background: none;
+    color: rgb(163, 159, 159);
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    margin-right: 0.60cm;
+    transition: 500ms;
+    padding-bottom: 10px;
+    font-family: Gabriola Regular;
+
+}
+
+#img-a {
+    width: 70px;
+    cursor: pointer;
+
+}
+
+#div-one button:hover {
+    color: rgb(255, 255, 255);
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+#div-one button:active {
+    animation: flickerAnimation 0.2s infinite
+}
+
+
+#no-div-middle{
+    width: 2000px;
+}
+#no-div-right{
+    width: 580px;
+}
+#no-div-left{
+    width: 500px;
+}
+
+#div1{
+    position: relative;
+    display:flex;
+    align-items: center;
+    padding-top: 150px;
+    padding-left: 350px;
+    padding-right: 15px;
+}
+
+#div2{
+    margin-top: 22px;
+    display: flex;
+    width: 1px;
+    height: 2000px;
+    background-color: white;
+    position: absolute;
+}
+
+#div3{
+position: relative;
+}
+
+
+
+#P1-1{
+    position: relative;
+    color: white;
+    font-size: 50px;
+    font-family: Garamond;
+    font-style: italic;
+}
+#P1-2{
+    position: relative;
+    color: white;
+    font-size:50px;
+    margin-top:-40px;
+    font-family: Garamond;
+    font-style: italic;
+
+}
+#H1{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    margin-bottom: -20px;
+    margin-right: 530px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+#P1-3{
+    position: relative;
+    color: white;
+    font-size: 14px;
+    margin-top:-10px;
+    margin-right: 520px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+#div2-k{
+    background-color: white;
+    position: absolute;
+    top: 20px; 
+    left: -7px; 
+    width: 15px; 
+    height: 15px; 
+    border-radius: 50%; 
+}
+
+#div2-kk{
+    background-color: black;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 13px; 
+    height: 13px; 
+    border-radius: 50%; 
+    z-index: 3;
+}
+
+#Gdiv2{
+    position: relative;
+    margin-top: -270px;
+    margin-right: 20px;
+
+}
+
+
+#no-cur{
+    position: absolute;
+    display: flex;
+    height: 300px;
+    width: 650px;
+}
+
+
+
+#black-curtains{
+    display: flex;
+    width: 700px;
+    height: 300px;
+    position: absolute;
+}
+
+#cur-1{
+    margin-top: 65px;
+    height: 75px;
+    position: absolute;
+    width: 620px;
+    background-color: rgba(32,32,32,255);
+    z-index: 1;
+}
+#cur-2{
+    position: absolute;
+    margin-top: 135px;
+    height: 75px;
+    position: absolute;
+    width: 620px;
+    background-color: rgba(32,32,32,255); 
+    z-index: 1;
+}
+#cur-3{   
+    margin-top: 225px;
+    height: 25px;
+    position: absolute;
+    width: 105px;
+    background-color: rgba(32,32,32,255); 
+    z-index: 1;
+}
+#cur-4{
+    margin-top: 6px;
+    height: 35px;
+    position: absolute;
+    width: 100px;
+    background-color: rgba(32,32,32,255);
+    z-index: 1;
+    }
+
+    #cur-1, #cur-2, #cur-3, #cur-4 {
+        position: absolute;
+        overflow: hidden;   /* Ensure the trail doesn't overflow */
+    
+    }
+
+/* Common styles for the text elements */
+#H1, #P1-1, #P1-2, #P1-3 {
+    position: relative;
+    overflow: hidden;   /* Ensure the trail doesn't overflow */
+
+}
+#cur-1::before{
+    content: '';
+    position: absolute;
+    top: 0;      /* Start the trail off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    z-index: 2;       /* Ensure the trail overlaps the text */
+    animation: trail 1s ease forwards; /* Blue trail animation */
+    border-radius: 5px;
+}
+
+
+#cur-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -700px;   /* Start the trail off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    z-index: 2;       /* Ensure the trail overlaps the text */
+    animation: trail 1s ease forwards; /* Blue trail animation */
+    border-radius: 5px;
+    animation-delay: 1s;
+
+}
+
+#cur-3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120px;      /* Start the trail off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;       /* Ensure the trail overlaps the text */
+    animation: trail 1s ease forwards; /* Blue trail animation */
+    animation-delay: 2.5s;
+}
+
+#cur-4::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120px;      /* Start the trail off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;       /* Ensure the trail overlaps the text */
+    animation: trail 1s ease forwards; /* Blue trail animation */
+    animation-delay: 2s;
+}
+
+
+
+
+
+#nocur-1{
+
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 0px;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(32,32,32,255);
+    z-index: 3;
+}
+#nocur-2{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 60px;
+    width: 90px;
+    height: 150px;
+    background-color: rgba(32,32,32,255);
+    z-index:3;
+}
+#nocur-4{
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 75px;
+    width: 100px;
+    height: 70px;
+    background-color: rgba(32,32,32,255);
+    z-index: 3;
+}
+
+
+
+
+#div31{
+    width: 1000px;
+    height: 400px;
+
+    margin-left: 350px;
+    margin-top: 350px;
+}
+
+
+#GVB{
+    position: relative;
+    width: 40px;
+    height: 400px;
+    margin-top: -402px;
+    margin-left: 330px;
+}
+
+#VB1{
+position: absolute;
+background-color: black;
+border: 1px solid;
+border-color: white;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+margin-left: 11px;
+}
+#VB2{
+position: absolute;
+background-color: black;
+border: 1px solid;
+border-color: white;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+margin-top: 135px;
+margin-left: 11px;
+}
+
+#VB3{
+position: absolute;
+background-color: black;
+border: 1px solid;
+border-color: white;
+width: 15px;
+height: 15px;
+border-radius: 50%;
+margin-top: 245px;
+margin-left: 11px;
+}
+
+#VB4{
+    position: absolute;
+    background-color: black;
+    border: 1px solid;
+    border-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 355px;
+    margin-left: 11px;
+}
+
+
+#P10{
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 0;
+    color: white;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+
+#VBT1{
+color: white;
+margin-left: 15px;
+margin-top: 115px;
+font-family: sans-serif;
+font-style: italic;
+font-weight: lighter;
+}
+#VBT2{
+color: white;
+margin-left: 15px;
+margin-top: 90px;
+font-family: sans-serif;
+font-style: italic;
+font-weight: lighter;
+}
+#VBT3{
+color: white;
+margin-left: 15px;
+margin-top: 95px;
+font-family: sans-serif;
+font-style: italic;
+font-weight: lighter;
+}
+
+#L1{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: -300px;
+    margin-left: 100px;
+}
+#L2{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#L3{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#L4{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#L5{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+#L6{
+    background-color: white;
+    height: 1px;
+    width: 650px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+#Projects{
+position: relative;
+}
+
+#Y{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    position: absolute;
+    color: white;
+    margin-top: -270px;
+    margin-left: 150px;
+}
+#N{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    position: absolute;
+    color: white;
+    margin-top: -160px;
+    margin-left: 150px;
+}
+#T{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    position: absolute;
+    color: white;
+    margin-top: -50px;
+    margin-left: 150px;
+}
+
+
+#Pimg{
+    position: relative;
+}
+
+#Yi{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-top: -325px;
+    margin-left: 500px;
+}
+#Ni{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -190px;
+    margin-left: 520px;
+}
+#Xi{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: -75px;
+    margin-left: 520px;
+    border-radius: 50%;
+}
+
+
+#div32{
+    display: flex;
+    height: 500px;
+    width: 900px;
+    margin-top: 400px;
+    margin-left: 300px;
+}
+
+
+#GVB1{
+    position: relative;
+    height: 500px;
+    width: 100px;
+
+}
+
+#VB11{
+    margin-left: 38px;
+    position: absolute;
+    background-color: black;
+    height: 18px;
+    width: 18px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: white;
+}
+
+#Contact{
+    font-size: 20px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-top: 1px;
+    margin-left: 80px;
+    position: absolute;
+    color: white;
+}
+
+#phone{
+    border: 1px solid;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 70px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#email{
+    border: 1px solid;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 150px;
+    color: white;
+}
+
+
+
+
+
+
+
+/*** animations*/
+
+.slide-top {
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @keyframes slide-top {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-2px);
+    }
+  }
+  
+  .flicker {
+  animation: flickerAnimation 0.2s infinite;
+}
+
+@keyframes flickerAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Trail animation: moves from left to right */
+@keyframes trail {
+    0% {
+        left: -100%;  /* Start off-screen */
+    }
+    100% {
+        left: 100%;   /* End off-screen to the right */
+    }
+}
